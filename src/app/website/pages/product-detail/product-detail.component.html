@@ -1,0 +1,19 @@
+<div class="page-product">
+  <button (click)="backPage()">Back</button>
+
+  <div class="detail" *ngIf="product">
+    <div class="gallery">
+      <img [src]="images" [alt]="images" *ngFor="let images of product.images">
+
+    </div>
+
+    <div>
+       <h1>{{ product.title }}</h1>
+       <h2>{{ product.price | currency}}</h2>
+       <p>{{ product.description }}</p>
+    </div>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,12 @@
+<div class="container-product">
+  <a [routerLink]="['/product', product.id]">
+    <app-img *ngIf="product.description.length > 0" [url_img]="url_img"></app-img>
+  </a>
+  <h3>{{product.title}}</h3>
+  <h2>{{ product.price | currency:'COP' }}</h2>
+  <p appHighlight="appHighlight">{{ product.description }}</p>
+  <p>{{ product.taxes | currency:'COP' }}</p>
+
+  <a routerLink="." [queryParams]="{product: product.id}">Ver detalle</a>
+  <button (click)="addToCart()">Add Cart</button>
+</div>

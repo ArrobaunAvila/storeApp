@@ -1,0 +1,65 @@
+.box{
+  height: 200px;
+  width: 200px;
+  overflow: auto;
+  background: red;
+}
+
+.message-error {
+  background-color: red;
+  color: white;
+  opacity: 0;
+  transition: all linear .5s;
+  &.invalid {
+    opacity: 1;
+  }
+}
+
+.input_valid{
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.line-error{
+  color: white;
+  padding: 10px;
+
+  &.invalid {
+    background-color: red;
+  }
+
+  &.valid {
+    background-color: goldenrod;
+  }
+
+}
+
+.styles {
+ display: grid;
+ grid-template-columns: repeat(2 , 1fr);
+}
+
+.grid-template-nba{
+  display: flex;
+  flex-direction: column;
+  div {
+   img {
+     width: 90%;
+     height: 90%;
+     border-radius: 30px;
+   }
+   h2, p {
+     margin: 0;
+   }
+  }
+}
+
+
+@media screen and (min-width: 40em) {
+  .grid-template-nba {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+  }
+}
+

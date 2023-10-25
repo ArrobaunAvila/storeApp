@@ -1,0 +1,12 @@
+<div class="template-profile" *ngIf="user">
+
+  <h2>Welcome {{user.name}} to StoreApp</h2>
+  <h3> {{ user.email }}</h3>
+  <p> You are  {{ user.role }} in StoreApp</p>
+
+
+  <p>Nombre: {{ user.name }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Role: {{ user.role }}</p>
+  <a *ngIf="user.role === 'admin'"  routerLink="/cms">Ir a CMS</a>
+</div>
