@@ -1,3 +1,5 @@
+
 export const environment = {
-  production: true
+  production: true,
+  API_URL: "https://damp-spire-59848.herokuapp.com/api/products"
 };
