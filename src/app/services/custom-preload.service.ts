@@ -11,6 +11,7 @@ export class CustomPreloadService implements PreloadingStrategy{
 
 
   preload(route: Route, load: () => Observable<any>): Observable<any> {
+    console.log(`Entrando a precarga de modulo`);
       if(route.data && route.data['preload']){
          return load();
       }
